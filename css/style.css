@@ -1,0 +1,330 @@
+@charset "UTF-8";
+/*
+フッターを画面下に配置するために、
+「position: relative;」を設定
+「min-height」で最小の高さを画面の高さにあわせる
+*/
+body {
+  color: #333;
+  font-size: 0.875rem;
+  background-color: #fff;
+  min-height: 100vh;
+  position: relative;
+}
+
+a {
+  transition: all 0.5s ease;
+}
+a:hover {
+  opacity: 0.7;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.content {
+  padding-top: 120px;
+  padding-bottom: 160px;
+}
+
+.site_title a {
+  width: 180px;
+  display: block;
+}
+
+.page_title {
+  margin-bottom: 30px;
+}
+
+/*----------------------------
+Header
+-----------------------------*/
+#header {
+  width: 100%;
+  height: 80px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  /* ハンバーガーメニューが開いているとき */
+  /*
+  ハンバーガーメニューの線の設定（メニューが開いている時）
+  線の色を白に変更
+  */
+  /*
+  メニューを開いている時は、全体を黒背景にする
+  */
+}
+#header #navi {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  color: #fff;
+  padding: 35px 50px;
+  transition: all 0.5s;
+  z-index: 20;
+  opacity: 0;
+}
+#header #navi li {
+  margin-bottom: 15px;
+}
+#header.open #navi {
+  left: 0;
+  opacity: 1;
+}
+#header .toggle_btn {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  transition: all 0.5s;
+  cursor: pointer;
+  z-index: 20;
+  /* 
+  ハンバーガーメニューの線の設定（メニューが閉じている時） 
+  */
+}
+#header .toggle_btn span {
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: #333;
+  border-radius: 5px;
+  transition: all 0.5s;
+  /* 1本目の線の位置を設定 */
+  /* 2本目の線の位置を設定 */
+}
+#header .toggle_btn span:nth-child(1) {
+  top: 10px;
+}
+#header .toggle_btn span:nth-child(2) {
+  bottom: 10px;
+}
+#header.open .toggle_btn span {
+  background-color: #fff;
+  /* 「rotate」は"回転"、「deg」は"度"（degreeの略） */
+  /* 1本目の線を-45度回転 */
+  /* 2本目の線を45度回転 */
+}
+#header.open .toggle_btn span:nth-child(1) {
+  transform: translateY(4px) rotate(-45deg);
+}
+#header.open .toggle_btn span:nth-child(2) {
+  transform: translateY(-4px) rotate(45deg);
+}
+#header #mask {
+  display: none;
+  transition: all 0.5s;
+}
+#header.open #mask {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.8;
+  z-index: 10;
+  cursor: pointer;
+}
+
+/*----------------------------
+TOP, PRODUCTS
+-----------------------------*/
+#top {
+  padding-top: 80px;
+  padding-bottom: 160px;
+}
+
+.product_list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.product_list li {
+  width: 23%;
+  margin-bottom: 40px;
+}
+.product_list li img {
+  margin-bottom: 10px;
+}
+.product_list li p {
+  font-size: 0.75rem;
+}
+
+.link_text {
+  display: block;
+  text-align: center;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+.pagination li {
+  padding: 0 20px;
+}
+
+/*----------------------------
+ITEM
+-----------------------------*/
+#item {
+  max-width: 800px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+#item .item_img {
+  width: 50%;
+}
+#item .item_txt {
+  width: 42%;
+}
+#item .item_txt p {
+  line-height: 1.6;
+  margin-bottom: 30px;
+  text-align: justify;
+}
+#item .item_txt .detail {
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 1.6;
+}
+#item .item_txt .detail dt {
+  width: 30%;
+}
+#item .item_txt .detail dd {
+  width: 70%;
+}
+
+/*----------------------------
+ABOUT
+-----------------------------*/
+#about {
+  max-width: 600px;
+}
+#about p {
+  line-height: 2;
+  margin-bottom: 30px;
+}
+
+/*----------------------------
+COMPANY
+-----------------------------*/
+#company {
+  max-width: 600px;
+}
+#company .info {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+#company .info dt {
+  width: 30%;
+  padding: 20px 10px;
+  border-bottom: 1px solid #DCDBDB;
+}
+#company .info dd {
+  width: 70%;
+  padding: 20px 10px;
+  border-bottom: 1px solid #DCDBDB;
+  line-height: 1.6;
+}
+#company .info dt:last-of-type,
+#company .info dd:last-of-type {
+  border-bottom: none;
+}
+#company .map {
+  filter: grayscale(1);
+}
+#company iframe {
+  width: 100%;
+  height: 300px;
+}
+
+/*----------------------------
+FOOTER
+-----------------------------*/
+#footer {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+}
+#footer .menu {
+  display: flex;
+}
+#footer .menu li {
+  font-size: 0.75rem;
+  margin-right: 30px;
+}
+#footer .copyright {
+  font-size: 0.625rem;
+}
+
+/*----------------------------
+SP
+-----------------------------*/
+@media screen and (max-width: 900px) {
+  /*----------------------------
+  TOP, PRODUCTS
+  -----------------------------*/
+  .product_list li {
+    width: 47%;
+  }
+  /*----------------------------
+  ITEM
+  -----------------------------*/
+  #item {
+    flex-direction: column;
+  }
+  #item .item_img {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  #item .item_txt {
+    width: 100%;
+  }
+  #item .item_txt p:last-of-type {
+    font-size: 0.75rem;
+  }
+  /*----------------------------
+  ABOUT
+  -----------------------------*/
+  /*----------------------------
+  COMPANY
+  -----------------------------*/
+  #company .info {
+    flex-direction: column;
+  }
+  #company .info dt {
+    width: 100%;
+    border-bottom: none;
+    padding-bottom: 5px;
+  }
+  #company .info dd {
+    width: 100%;
+    padding-top: 5px;
+  }
+  /*----------------------------
+  FOOTER
+  -----------------------------*/
+  #footer {
+    flex-direction: column;
+  }
+  #footer .menu {
+    margin-bottom: 5px;
+  }
+}/*# sourceMappingURL=style.css.map */

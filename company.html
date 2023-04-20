@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Company ｜ Furniture Design</title>
+</head>
+
+<body>
+  <header id="header" class="wrapper">
+    <h1 class="site_title">
+      <a href="index.html"><img src="images/logo.svg" alt="Furniture Design"></a>
+    </h1>
+
+    <!-- ハンバーガーメニューページ -->
+    <nav id="navi">
+      <ul class="nav_menu">
+        <li><a href="products.html">PRODUCTS</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="company.html">COMPANY</a></li>
+        <!-- クリックするとメールが起動、件名（subject）付き -->
+        <li><a href="mailto:xxxxx@xxx.xxx.com?subject=お問い合わせ">CONTACT</a></li>
+      </ul>
+    </nav>
+
+    <!-- ハンバーガーメニューボタン -->
+    <div class="toggle_btn">
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- ハンバーガーメニューの背景 -->
+    <div id="mask"></div>
+  </header>
+
+  <main>
+    <div class="content wrapper">
+      <h1 class="page_title">Company</h1>
+      <div id="company">
+        <dl class="info">
+          <dt>社名</dt>
+          <dd>株式会社ファニチャーデザイン</dd>
+          <dt>住所</dt>
+          <dd>〒107-0062 東京都港区南青山１丁目××××××</dd>
+          <dt>設立</dt>
+          <dd>XXXX年XX月</dd>
+          <dt>資本金</dt>
+          <dd>XXXX万円</dd>
+          <dt>従業員数</dt>
+          <dd>XX名</dd>
+          <dt>事業内容</dt>
+          <dd>家具、インテリアの企画・生産<br>
+            家具、インテリアの販売<br>
+            店舗の企画・デザイン・設計
+          </dd>
+        </dl>
+
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7152.886218878947!2d127.79599674999999!3d26.312147549999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e512882faabc8d%3A0x6ed2fab0494316fc!2z44CSOTAxLTIzMDYg5rKW57iE55yM5Lit6aCt6YOh5YyX5Lit5Z-O5p2R44Op44Kk44Kr44Og!5e0!3m2!1sja!2sjp!4v1671021298836!5m2!1sja!2sjp"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer id="footer" class="wrapper">
+    <ul class="menu">
+      <li><a href="#" target="_blank">INSTAGRAM</a></li>
+      <li><a href="#" target="_blank">TWITTER</a></li>
+      <li><a href="#" target="_blank">FACEBOOK</a></li>
+    </ul>
+    <p class="copyright">&copy; Furniture Design</p>
+  </footer>
+
+  <!-- jQuery読み込み -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
